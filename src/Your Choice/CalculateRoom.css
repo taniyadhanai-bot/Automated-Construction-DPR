@@ -1,0 +1,224 @@
+/* ==========================
+   CalculateRoom.css
+   ========================== */
+
+/* 🧱 Main Page Container */
+.output-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 4rem 6rem 4rem; /* extra bottom padding for buttons */
+  margin: 2% auto;
+  max-width: 90%;
+  max-height: 85vh;
+  background: rgba(98, 116, 117, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 2rem;
+  box-shadow: 0 10px 25px rgba(10, 10, 10, 0.05);
+  color: white;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==========================
+   Headings
+   ========================== */
+.output-page h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.output-page h2 {
+  font-size: 1.8rem;
+  margin: 25px 0 10px 0;
+  color: #fff;
+}
+
+.output-page h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* ==========================
+   Summary / Section Boxes
+   ========================== */
+.floor-summary {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================
+   Tables
+   ========================== */
+.floor-summary table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+  margin-top: 10px;
+}
+
+.floor-summary th,
+.floor-summary td {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.floor-summary th {
+  background: rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+}
+
+.floor-summary td {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.floor-summary tr:hover td {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================
+   Buttons
+   ========================== */
+.button-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 40px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.output-page button {
+  padding: 12px 25px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #6c63ff, #3f3d56);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(108, 99, 255, 0.3);
+}
+
+.output-page button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px rgba(108, 99, 255, 0.4);
+}
+
+/* ==========================
+   Scrollbar
+   ========================== */
+.output-page::-webkit-scrollbar {
+  width: 8px;
+}
+.output-page::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+.output-page::-webkit-scrollbar-thumb {
+  background: rgba(108, 99, 255, 0.6);
+  border-radius: 4px;
+}
+.output-page::-webkit-scrollbar-thumb:hover {
+  background: rgba(108, 99, 255, 0.8);
+}
+
+/* ==========================
+   Horizontal Line
+   ========================== */
+.output-page hr {
+  margin: 30px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================
+   Print Styles (for Print Button)
+   ========================== */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .output-page,
+  .output-page * {
+    visibility: visible;
+  }
+  .output-page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white;
+    color: black;
+  }
+  .button-row {
+    display: none;
+  }
+}
+
+/* ==========================
+   Responsive Design
+   ========================== */
+@media (max-width: 768px) {
+  .output-page {
+    padding: 2rem 1.5rem 5rem 1.5rem;
+    max-height: 90vh;
+  }
+
+  .output-page h1 {
+    font-size: 2rem;
+  }
+
+  .output-page h2 {
+    font-size: 1.4rem;
+  }
+
+  .floor-summary {
+    padding: 15px;
+  }
+
+  .floor-summary th,
+  .floor-summary td {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+/* 🧾 PDF / Print Mode Preview */
+.print-mode {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+.print-mode table,
+.print-mode th,
+.print-mode td {
+  border-color: #000 !important;
+  color: #000 !important;
+}
+
+.print-mode th {
+  background: #f3f3f3 !important;
+}
+
+/* ==========================
+   End of CalculateRoom.css
+   ========================== */
