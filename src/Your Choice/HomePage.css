@@ -1,0 +1,146 @@
+/* General container styling (merged with glass effect) */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 3rem 4rem;
+  margin-top: 5%;
+  background: rgba(98, 116, 117, 0.171);
+  backdrop-filter: blur(10px);
+  border-radius: 2rem;
+  box-shadow: 0 10px 25px rgba(10, 10, 10, 0.037);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  max-width: 90%;
+  min-height: 40% !important;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* Hover effect (optional but stylish) */
+.home-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Heading styling with animation */
+.home-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff; /* white for dark background */
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+  text-align: center;
+}
+
+.home-heading.top {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Input section container */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.15); /* slightly translucent white */
+  backdrop-filter: blur(8px);
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Input rows with flex layout */
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* Input field styling */
+input[type="number"] {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #6c63ff;
+  box-shadow: 0px 0px 10px rgba(108, 99, 255, 0.3);
+  outline: none;
+}
+
+/* Select dropdown styling */
+select {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  font-size: 1rem;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+select:focus {
+  border-color: #6c63ff;
+  box-shadow: 0px 0px 10px rgba(108, 99, 255, 0.3);
+  outline: none;
+}
+
+/* Next button styling */
+.next-btn {
+  margin-top: 10px;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #6c63ff, #3f3d56);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.next-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 20px rgba(108, 99, 255, 0.4);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 2rem;
+    max-height: 90vh;
+  }
+
+  .home-heading {
+    font-size: 2.2rem;
+  }
+
+  .input-section {
+    padding: 30px 20px;
+  }
+}

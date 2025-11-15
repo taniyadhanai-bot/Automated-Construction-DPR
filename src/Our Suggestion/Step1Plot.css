@@ -1,0 +1,99 @@
+/* Container */
+.step1-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  color: white;
+  max-width: 600px;
+  padding: 1.5rem;
+}
+
+/* Heading */
+.step1-container h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* Grid Layout for Inputs */
+.step1-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* Individual Input Block */
+.step1-grid div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.step1-grid label {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: white;
+  text-align: left;
+}
+
+/* Input Fields */
+.step1-grid input[type="number"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.step1-grid input[type="number"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.step1-grid input[type="number"]:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* Button */
+.step1-container button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #6c63ff, #3f3d56);
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  min-width: 150px;
+}
+
+.step1-container button:hover:enabled {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(108, 99, 255, 0.4);
+}
+
+.step1-container button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+  .step1-grid {
+    grid-template-columns: 1fr;
+  }
+}
