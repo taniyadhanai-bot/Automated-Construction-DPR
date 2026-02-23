@@ -1,0 +1,139 @@
+/* Predefined.css for Predefined.jsx */
+
+/* Body & container */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f4f6; /* Tailwind gray-100 */
+}
+
+.min-h-screen {
+  min-height: 100vh; /* full viewport */
+  padding: 1.5rem; /* p-6 */
+}
+
+.max-w-5xl {
+  max-width: 80rem; /* approx 5xl */
+  margin: 0 auto;
+}
+
+.bg-white {
+  background-color: rgba(255, 255, 255, 0.15); /* glassy */
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem; /* p-6 */
+}
+
+/* Headings */
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+/* Step indicator */
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.text-gray-400 {
+  color: #9ca3af;
+}
+
+/* Font weight for active step */
+.font-bold {
+  font-weight: 700;
+}
+
+/* Step container */
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #6c63ff, #3f3d56);
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(108, 99, 255, 0.4);
+}
+
+/* Input sections (Step1 & Step2) */
+input[type="number"],
+select {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+
+input[type="number"]::placeholder,
+select {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input[type="number"]:focus,
+select:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* Flex layout for forms */
+.input-row,
+.floor-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.75rem;
+}
+
+/* Scrollable content (for Step3 if needed) */
+.scrollable {
+  max-height: 60vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .bg-white {
+    padding: 1rem;
+  }
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+  input[type="number"],
+  select {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+}

@@ -1,0 +1,70 @@
+.calculator-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+}
+
+.calculator-container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.input-section input,
+.input-section select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+
+.input-section input:focus,
+.input-section select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.input-section button {
+  padding: 0.6rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-section button:hover {
+  background-color: #2563eb;
+}
+
+.results-section {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-top: 1px solid #d1d5db;
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+}
+
+.results-section h2 {
+  margin-bottom: 1rem;
+  color: #3b82f6;
+}
+
+.results-section p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #1f2937;
+}
