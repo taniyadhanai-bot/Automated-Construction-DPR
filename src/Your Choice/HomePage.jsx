@@ -8,8 +8,8 @@ const HomePage = () => {
   const [length, setLength] = useState("");
   const [width, setWidth] = useState("");
   const [floors, setFloors] = useState("");
-  const [lengthUnit, setLengthUnit] = useState("m");
-  const [widthUnit, setWidthUnit] = useState("m");
+  const [lengthUnit, setLengthUnit] = useState("ft");
+  const [widthUnit, setWidthUnit] = useState("ft");
 
   useEffect(() => {
     const timer = setTimeout(() => setHeadingTop(true), 1000);
