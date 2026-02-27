@@ -41,7 +41,7 @@ const CalculateRoom = () => {
   const [beamData, setBeamData] = useState({});
   const [materialData, setMaterialData] = useState({});
   const [detailedData, setDetailedData] = useState({});
-  const [plumbingData, setPlumbingData] = useState({});
+  // const [plumbingData, setPlumbingData] = useState({});
 
   const DEFAULT_HEIGHT = 9; // ft
 
@@ -142,17 +142,17 @@ const CalculateRoom = () => {
     );
 
     // ✅ Plumbing estimation
-    const PLUMBING_RATE_PER_SQFT = 350;
-    const basePlumbingCost = (totalBuildingArea / 1000) * PLUMBING_RATE_PER_SQFT;
+    // const PLUMBING_RATE_PER_SQFT = 500;//350
+    // const basePlumbingCost = (totalBuildingArea / 1000) * PLUMBING_RATE_PER_SQFT;
 
-    const plumbingPoints = Math.round(totalBuildingArea / 100);
-    const pipeCost = plumbingPoints * 500;
-    const fixtureCost = plumbingPoints * 1200;
-    const tankCost = 5000;
-    const labourCost = basePlumbingCost * 0.25;
+    // const plumbingPoints = Math.round(totalBuildingArea / 100);
+    // const pipeCost = plumbingPoints * 500;
+    // const fixtureCost = plumbingPoints * 1200;
+    // const tankCost = 5000;
+    // const labourCost = basePlumbingCost * 3;
 
-    const totalPlumbingCost =
-      basePlumbingCost + pipeCost + fixtureCost + tankCost + labourCost;
+    // const totalPlumbingCost =
+    //   basePlumbingCost + pipeCost + fixtureCost + tankCost + labourCost;
 
     // ✅ Final total cost
     const total =
@@ -160,8 +160,8 @@ const CalculateRoom = () => {
       totalRoofCost +
       totalBuildingCost +
       totalBeamCost +
-      totalMaterialCost +
-      totalPlumbingCost;
+      totalMaterialCost ;
+      // totalPlumbingCost;
 
     // ✅ Update states
     setTotalArea(totalBuildingArea);
@@ -176,15 +176,15 @@ const CalculateRoom = () => {
       beamCountPer1000,
     });
     setMaterialData({ materials, totalMaterialCost });
-    setPlumbingData({
-      basePlumbingCost,
-      plumbingPoints,
-      pipeCost,
-      fixtureCost,
-      tankCost,
-      labourCost,
-      totalPlumbingCost,
-    });
+    // setPlumbingData({
+    //   basePlumbingCost,
+    //   plumbingPoints,
+    //   pipeCost,
+    //   fixtureCost,
+    //   tankCost,
+    //   labourCost,
+    //   totalPlumbingCost,
+    // });
   }, [result]);
 
   // 🧭 if no data
@@ -340,47 +340,6 @@ const CalculateRoom = () => {
             <tr>
               <td colSpan={3}><strong>Total Material Cost</strong></td>
               <td><strong>₹{materialData.totalMaterialCost?.toLocaleString()}</strong></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      {/* Plumbing */}
-      <h2>🚰 Plumbing Estimation</h2>
-      <div className="floor-summary">
-        <table>
-          <tbody>
-            <tr>
-              <th>Total Area</th>
-              <td>{totalArea.toFixed(2)} sq.ft</td>
-            </tr>
-            <tr>
-              <th>Plumbing Base Cost</th>
-              <td>₹{plumbingData.basePlumbingCost?.toLocaleString()}</td>
-            </tr>
-            <tr>
-              <th>Plumbing Points</th>
-              <td>{plumbingData.plumbingPoints}</td>
-            </tr>
-            <tr>
-              <th>Pipes Cost</th>
-              <td>₹{plumbingData.pipeCost?.toLocaleString()}</td>
-            </tr>
-            <tr>
-              <th>Fixtures Cost</th>
-              <td>₹{plumbingData.fixtureCost?.toLocaleString()}</td>
-            </tr>
-            <tr>
-              <th>Water Tank Cost</th>
-              <td>₹{plumbingData.tankCost?.toLocaleString()}</td>
-            </tr>
-            <tr>
-              <th>Labour Cost</th>
-              <td>₹{plumbingData.labourCost?.toLocaleString()}</td>
-            </tr>
-            <tr>
-              <th><strong>Total Plumbing Cost</strong></th>
-              <td><strong>₹{plumbingData.totalPlumbingCost?.toLocaleString()}</strong></td>
             </tr>
           </tbody>
         </table>
